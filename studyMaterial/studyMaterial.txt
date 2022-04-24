@@ -1,1 +1,75 @@
 Study Materials
+For studing Git:
+
+Git
+
+Versions control system:
+Version control system keeps track of all code modifications in a special type of database. If a mistake is made, developers can go back in time and compare previous versions of code to help resolve the mistake, while minimizing disruption to all team members, in addition, the development efficiency is greatly increased.
+
+What is Git?
+It is the most widely used modern version control system in the world. Git is a mature and actively maintained open source project originally developed by Linus Torvalds. 
+With it we can maintain a complete version history, it has a working system with branches capable of adding, removing or returning to the content of the branches.
+
+
+Git Commands
+git clone <https://name-of-the-repository-link>
+
+Download existing source code from a remote repository
+
+git branch <branch-name>
+
+Create a branch locally
+
+git push -u <remote> <branch-name>
+
+To push the new branch into the remote repository
+git branch or git branch --list
+
+Viewing branches
+git checkout <name-of-your-branch>
+
+Switch from one branch to another
+git status
+
+Gives us all the necessary information about the current branch.
+git add <file>
+
+To add a single file
+git add -A
+
+To add all the files.
+git commit -m "commit message"
+
+setting a checkpoint in the development process which you can go back to later if needed. We also need to write a short message to explain what we have developed or changed in the source code.
+git push <remote> <branch-name>
+
+After committing your changes, the next thing you want to do is send your changes to the remote server. Git push uploads your commits to the remote repository.
+git pull <remote>
+
+The git pull command is used to get updates from the remote repository.
+git merge <branch-name>
+
+Git merge basically integrates your feature branch with all of its commits back to the dev (or master) branch.
+
+Git Rebase VS  Git Merge:
+
+The biggest advantage of rebasing is that it can be used to achieve nicer, linear sequence of commits. The repository's commit history / log will be much clearer if you just use rebase.
+
+
+
+Merge											Rebase
+Git merge is a command that allows you to merge branches from Git.			Git rebase is a command that allows developers to integrate changes from one branch to another.
+In Git Merge logs will be showing the complete history of the merging of commits.	Logs are linear in Git rebase as the commits are rebased 
+All the commits on the feature branch will be combined as a single commit in 		All the commits will be rebased and the same number of commits will be added to the master branch.
+the master branch.	
+Git Merge is used when the target branch is shared branch				Git Rebase should be used when the target branch is private branch
+
+
+
+
+
+
+Biglografy Git
+https://www.atlassian.com/es/git/tutorials/what-is-version-control
+
+https://www.freecodecamp.org/news/10-important-git-commands-that-every-developer-should-know/
