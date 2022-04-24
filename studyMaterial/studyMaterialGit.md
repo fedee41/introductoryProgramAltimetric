@@ -8,12 +8,12 @@
 #Versions control system:
 Version control system keeps track of all code modifications in a special type of database. If a mistake is made, developers can go back in time and compare previous versions of code to help resolve the mistake, while minimizing disruption to all team members, in addition, the development efficiency is greatly increased.
 
-#What is Git?
+###What is Git?
 It is the most widely used modern version control system in the world. Git is a mature and actively maintained open source project originally developed by Linus Torvalds. 
 With it we can maintain a complete version history, it has a working system with branches capable of adding, removing or returning to the content of the branches.
 
 
-#Git Commands
+###Git Commands
 git clone <https://name-of-the-repository-link>
 
 Download existing source code from a remote repository
@@ -81,6 +81,25 @@ Rebase
 -All the commits will be rebased and the same number of commits will be added to the master branch.
 -Git Rebase should be used when the target branch is private branch.
 
+###Git branching strategies and flows
+
+In the Git flow workflow, there are five different branch types:
+Main
+The purpose of the main branch in the Git flow workflow is to contain production-ready code that can be released.
+
+Develop
+The develop branch is created at the start of a project and is maintained throughout the development process, and contains pre-production code with newly developed features that are in the process of being tested.
+
+Feature
+The feature branch is the most common.It is used when adding new features to your code. When working on a new feature, you will start a feature branch off the develop branch, and then merge your changes back into the develop branch when the feature is completed and properly reviewed.
+
+Release
+The release branch should be used when preparing new production releases. Typically, the work being performed on release branches concerns finishing touches and minor bugs specific to releasing new code, with code that should be addressed separately from the main develop branch.
+
+Hotfix
+The hotfix branch is used to quickly address necessary changes in your main branch.
+The base of the hotfix branch should be your main branch and should be merged back into both the main and develop branches. Merging the changes from your hotfix branch back into the develop branch is critical to ensure the fix persists the next time the main branch is released.
+
 
 ### Bibliography
 
@@ -93,3 +112,5 @@ https://www.atlassian.com/es/git/tutorials/what-is-version-control
 https://www.freecodecamp.org/news/10-important-git-commands-that-every-developer-should-know/
 
 https://medium.com/@slamflipstrom/a-beginners-guide-to-squashing-commits-with-git-rebase-8185cf6e62ec
+
+https://www.gitkraken.com/learn/git/git-flow
