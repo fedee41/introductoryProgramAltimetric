@@ -1,19 +1,25 @@
-### Study Materials
+# Study Materials
 
-## Table of contents-
+## Table of contents
+-Versions control system
+-What is Git?
+-Git Commands
 -Rebase and Squash
 -Git Rebase VS Git Merge
+-Git branching strategies and flows
+-Bibliography
 
 ## Content
-#Versions control system:
+
+### Versions control system:
 Version control system keeps track of all code modifications in a special type of database. If a mistake is made, developers can go back in time and compare previous versions of code to help resolve the mistake, while minimizing disruption to all team members, in addition, the development efficiency is greatly increased.
 
-###What is Git?
+### What is Git?
 It is the most widely used modern version control system in the world. Git is a mature and actively maintained open source project originally developed by Linus Torvalds. 
 With it we can maintain a complete version history, it has a working system with branches capable of adding, removing or returning to the content of the branches.
 
 
-###Git Commands
+### Git Commands
 git clone <https://name-of-the-repository-link>
 
 Download existing source code from a remote repository
@@ -59,7 +65,7 @@ It is a way to join all the commits into one and then rebase to join them to the
 
 To combine multiple commits, we need to know either the number of commits we want to combine or the hash.
 shell-
-git rebase -i [your hash] or git rebase -i HEAD~(número de commits para revisar)
+git rebase -i [your hash] or git rebase -i HEAD~(number of commits to see)
 -shell
 Once the command is executed, a text editor opens, where we will have the commits first, in order of time as they were created, that is, the oldest at the beginning.
    You can see pick (p) which means that this commit will remain in the history or add squash(s) which means that this commit will be merged with the previous one.
@@ -81,7 +87,7 @@ Rebase
 -All the commits will be rebased and the same number of commits will be added to the master branch.
 -Git Rebase should be used when the target branch is private branch.
 
-###Git branching strategies and flows
+### Git branching strategies and flows
 
 In the Git flow workflow, there are five different branch types:
 Main
@@ -101,7 +107,7 @@ The hotfix branch is used to quickly address necessary changes in your main bran
 The base of the hotfix branch should be your main branch and should be merged back into both the main and develop branches. Merging the changes from your hotfix branch back into the develop branch is critical to ensure the fix persists the next time the main branch is released.
 
 
-### Bibliography
+## Bibliography
 
 https://www.atlassian.com/es/git/tutorials/what-is-version-control
 
